@@ -13,7 +13,6 @@
    `python -m venv venv`
 
    `source venv/Scripts/activate`
-
 2. Встановлення необхідних програм
    Встановіть усі бібліотеки одним рядком:
    `pip install fastapi uvicorn sqlalchemy psycopg2-binary pydantic[email] alembic faker`
@@ -21,16 +20,16 @@
    `pip install -r requirements.txt`
 3. Налаштування бази даних
    Переконайтеся, що ваш PostgreSQL запущений. У файлах db.py та alembic.ini має бути вказаний ваш актуальний пароль (за замовчуванням стоїть mysecretpassword).
-4. Створення таблиць (Міграції)
-   Щоб база даних створила потрібні таблиці, виконайте:
+4. Виконайте для міграцій:
    `alembic upgrade head`
 5. Заповнення бази та запуск
    Спочатку запустіть скрипт для генерації тестових контактів:
    `python seed.py`
-   7. Тепер запускайте сам сервер:`uvicorn main:app --reload`
 
-   8. Коли сервер запуститься, відкрийте браузер за адресою:[
-      `http://127.0.0.1:8000/docs`](https://www.google.com/search?q=http://127.0.0.1:8000/docs)
+   Тепер запускайте сам сервер:`uvicorn main:app --reload`
+
+   Коли сервер запуститься, відкрийте браузер за адресою:[
+   `http://127.0.0.1:8000/docs`](https://www.google.com/search?q=http://127.0.0.1:8000/docs)
 
 ## Структура файлів
 
